@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_gallery"
+        android:icon="@drawable/ic_gallery"
+        android:title="Gallery" />
+    <item
+        android:id="@+id/nav_flight_plan"
+        android:icon="@drawable/ic_flight_plan"
+        android:title="Flight Plan" />
+    <item
+        android:id="@+id/nav_streaming"
+        android:icon="@drawable/ic_streaming"
+        android:title="Streaming" />
+    <item
+        android:id="@+id/nav_video"
+        android:icon="@drawable/ic_video"
+        android:title="Video" />
+</menu>
+    
