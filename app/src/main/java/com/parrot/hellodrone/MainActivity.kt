@@ -8,33 +8,38 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNavigationView.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_home -> {
-                    openFragment(HomeFragment())
-                    true
-                }
-                R.id.nav_streaming -> {
-                    openFragment(StreamingFragment())
-                    true
-                }
-                else -> false
+    val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+    bottomNavigationView.setOnItemSelectedListener { item ->
+        when (item.itemId) {
+            R.id.nav_home -> {
+                openFragment(HomeFragment())
+                true
             }
-        }
-
-        // Load the home fragment by default
-        if (savedInstanceState == null) {
-            bottomNavigationView.selectedItemId = R.id.nav_home
+            R.id.nav_streaming -> {
+                openFragment(StreamingFragment())
+                true
+            }
+            R.id.nav_video -> {
+                openFragment(VideoFragment())
+                true
+            }
+            else -> false
         }
     }
 
-    private fun openFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
-            .commit()
+    // Load the home fragment by default
+    if (savedInstanceState == null) {
+        bottomNavigationView.selectedItemId = R.id.nav_home
     }
+}
+
+private fun openFragment(fragment: Fragment) {
+    supportFragmentManager.beginTransaction()
+        .replace(R.id.fragment_container, fragment)
+        .commit()
+}
+
 }
