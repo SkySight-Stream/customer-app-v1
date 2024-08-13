@@ -30,6 +30,10 @@ class MainActivity : AppCompatActivity() {
                 openFragment(FlightPlanFragment())
                 true
             }
+            R.id.nav_gallery -> {
+                openFragment(GalleryFragment())
+                true
+            }
             else -> false
         }
     }
