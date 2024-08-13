@@ -26,6 +26,10 @@ class MainActivity : AppCompatActivity() {
                 openFragment(VideoFragment())
                 true
             }
+            R.id.nav_flight_plan -> {
+                openFragment(FlightPlanFragment())
+                true
+            }
             else -> false
         }
     }
