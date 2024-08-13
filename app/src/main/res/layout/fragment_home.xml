@@ -6,70 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <!-- Drone Status Label -->
+
+    <!-- Drone State Text -->
+    <TextView
+        android:id="@+id/droneStatusLabel"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginTop="288dp"
+        android:text="Drone Status"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <TextView
+        android:id="@+id/droneBatteryTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Battery: Unknown"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/droneStateTxt" />
 
-            <TextView
-                android:id="@+id/labelDroneControl"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Drone"/>
+    <TextView
+        android:id="@+id/flyingTimeLeftTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Flying Time Left: Unknown"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/droneBatteryTxt" />
 
-            <TextView
-                android:id="@+id/droneStateTxt"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="state"
-                android:textAlignment="center"/>
+    <TextView
+        android:id="@+id/droneStateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="State: Unknown"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/droneStatusLabel" />
 
-            <TextView
-                android:id="@+id/droneBatteryTxt"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text=""
-                android:textAlignment="textEnd"/>
-        </LinearLayout>
+    <!-- Drone Battery Text -->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/labelRemoteControl"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Remote"/>
-
-            <TextView
-                android:id="@+id/rcStateTxt"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="state"
-                android:textAlignment="center"/>
-
-            <TextView
-                android:id="@+id/rcBatteryTxt"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text=""
-                android:textAlignment="textEnd"/>
-        </LinearLayout>
-    </LinearLayout>
+    <!-- Flying Time Left Text -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-    
